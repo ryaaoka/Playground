@@ -1,0 +1,29 @@
+{
+	"presets": ["@babel/preset-env"],
+	"plugins": [
+		[
+			"module-resolver",
+			{
+				"root": [
+					"./"
+				],
+				"alias": {
+					"app": "./src/app",
+				}
+			}
+		]
+	],
+	"env": {
+		"test": {
+			"presets": [
+				[
+					{
+						"preset-env": {
+							"modules": "commonjs"
+						}
+					}
+				]
+			]
+		}
+	}
+}
